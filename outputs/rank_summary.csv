@@ -1,0 +1,6 @@
+﻿model,retrieved_rows,mean_rank
+BM25,15,2.6
+TFIDF,15,2.6
+LM,15,2.6
+Vector_E5,40,3.0
+Vector_Silm,40,3.0

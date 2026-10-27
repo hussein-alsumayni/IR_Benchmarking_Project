@@ -1,0 +1,28 @@
+# 🔍 Performance Benchmarking of Lexical vs. Dense Vector IR Models (Quranic Corpus)
+
+A comprehensive performance benchmarking project comparing lexical and dense vector Information Retrieval (IR) models using a Quranic text dataset.
+
+---
+
+### 💡 Project Overview
+This project evaluates and compares five different information retrieval models across eight diverse benchmark queries (including exact Arabic words, phrases, meaning-based queries, misspelled words, and English queries). The core objective is to analyze the trade-offs between speed, indexing overhead, and query coverage across lexical and semantic search architectures.
+
+---
+
+### 🛠️ Models Evaluated
+1. **Lexical Models (via PyTerrier):**
+   * **BM25**[span_0](start_span)[span_0](end_span)
+   * **TF-IDF**[span_1](start_span)[span_1](end_span)
+   * **Language Model (LM / Hiemstra_LM)**[span_2](start_span)[span_2](end_span)
+2. **Dense Vector Models (via ChromaDB):**
+   * **Vector_E5** (Large multilingual model: `intfloat/multilingual-e5-large`)[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span)
+   * **Vector_Silm** (Small multilingual model: `multilingual-e5-small`)[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span)
+
+---
+
+### 📊 Key Findings & Benchmarks
+* **Indexing Time:** Lexical models (BM25, TF-IDF, LM) shared the fastest indexing time at **1.432 seconds**[span_7](start_span)[span_7](end_span). Among dense models, `Vector_Silm` took **25.741 seconds**, making it roughly **9.8x faster** to build than `Vector_E5` (251.588 seconds)[span_8](start_span)[span_8](end_span).
+* **Query Latency:** `LM` achieved the fastest average query time (**2.254 ms**)[span_9](start_span)[span_9](end_span). For semantic models, `Vector_Silm` was significantly faster (**13.922 ms**) compared to `Vector_E5` (**77.118 ms**)[span_10](start_span)[span_10](end_span).
+* **Coverage:** Dense vector models (`Vector_E5` and `Vector_Silm`) successfully returned top results for all 8 queries (including English and misspelled ones), whereas lexical models excelled at precise keyword matching but lacked coverage on out-of-vocabulary or semantic queries[span_11](start_span)[span_11](end_span).
+
+---
