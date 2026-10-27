@@ -1,6 +1,6 @@
 # 🎓 Performance Benchmarking of Lexical vs. Dense Vector IR Models
 
-A comprehensive performance benchmarking project comparing lexical and dense vector Information Retrieval (IR) models using a Quranic text dataset.
+A comprehensive performance benchmarking project comparing lexical and dense vector Information Retrieval models using a Quranic text dataset.
 
 ### 💡 Project Overview
 This project evaluates and compares five different information retrieval models across eight diverse benchmark queries. The core objective is to analyze the trade-offs between speed, indexing overhead, and query coverage.
